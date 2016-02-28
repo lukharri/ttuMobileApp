@@ -16,12 +16,16 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true"
         android:id="@+id/gridLayout"
-        android:background="@drawable/ttu_sepia">
+        android:background="@drawable/mr_wood_backgrd"
+        android:orientation="horizontal"
+        android:columnCount="4"
+        android:rowCount="10">
+
 
         <ImageButton
             android:layout_width="65dp"
             android:layout_height="65dp"
-            android:id="@+id/imageButton"
+            android:id="@+id/admissions"
             android:layout_row="0"
             android:layout_column="0"
             android:minHeight="@android:dimen/notification_large_icon_height"
@@ -30,12 +34,22 @@
             android:layout_marginLeft="9dp"
             android:layout_marginTop="18dp"
             android:layout_marginBottom="30dp"
-            android:background="@drawable/admissions_icon2" />
+            android:background="@drawable/admissions_icon2"
+            android:onClick="menuItemClicked"
+            android:contentDescription="goes to admissions info"/>
+
+        <!--<TextView -->
+            <!--android:layout_row="1"-->
+            <!--android:layout_column="0"-->
+            <!--android:text="ADMISSIONS"-->
+            <!--android:textColor="@android:color/white"-->
+            <!--android:textSize="10dp" />-->
+
 
         <ImageButton
             android:layout_width="67dp"
             android:layout_height="71dp"
-            android:id="@+id/imageButton2"
+            android:id="@+id/athletics"
             android:layout_row="0"
             android:layout_column="1"
             android:minHeight="@android:dimen/notification_large_icon_height"
@@ -43,36 +57,66 @@
             android:layout_marginTop="18dp"
             android:layout_marginRight="25dp"
             android:layout_marginBottom="30dp"
-            android:background="@drawable/trophy_icon" />
+            android:background="@drawable/trophy_icon"
+            android:onClick="menuItemClicked"
+            android:contentDescription="goes to athletics info"/>
+
+        <!--<TextView-->
+            <!--android:layout_row="1"-->
+            <!--android:layout_column="1"-->
+            <!--android:text="ATHLETICS"-->
+            <!--android:textColor="@android:color/white"-->
+            <!--android:textSize="10dp" />-->
+
 
         <ImageButton
             android:layout_width="65dp"
             android:layout_height="65dp"
-            android:id="@+id/imageButton3"
+            android:id="@+id/busRoutes"
             android:layout_row="0"
             android:layout_column="2"
             android:minHeight="@android:dimen/notification_large_icon_height"
             android:minWidth="@android:dimen/notification_large_icon_width"
             android:layout_marginTop="18dp"
-            android:layout_marginRight="25dp"
+            android:layout_marginRight="20dp"
             android:layout_marginBottom="30dp"
-            android:background="@drawable/bus_icon_two" />
+            android:background="@drawable/bus_icon_two"
+            android:onClick="menuItemClicked"
+            android:contentDescription="displays bus routes"/>
+
+        <!--<TextView-->
+            <!--android:layout_row="1"-->
+            <!--android:layout_column="2"-->
+            <!--android:text="BUS ROUTES"-->
+            <!--android:textColor="@android:color/white"-->
+            <!--android:textSize="10dp" />-->
+
 
         <ImageButton
             android:layout_width="65dp"
             android:layout_height="65dp"
-            android:id="@+id/imageButton4"
+            android:id="@+id/classes"
             android:layout_row="0"
             android:layout_column="3"
             android:layout_marginTop="18dp"
             android:minHeight="@android:dimen/notification_large_icon_height"
             android:minWidth="@android:dimen/notification_large_icon_width"
-            android:background="@drawable/coures_icon" />
+            android:background="@drawable/coures_icon"
+            android:onClick="menuItemClicked"
+            android:contentDescription="displays classes info"/>
+
+        <!--<TextView-->
+            <!--android:layout_row="1"-->
+            <!--android:layout_column="3"-->
+            <!--android:text="CLASSES"-->
+            <!--android:textColor="@android:color/white"-->
+            <!--android:textSize="10dp" />-->
+
 
         <ImageButton
             android:layout_width="65dp"
             android:layout_height="65dp"
-            android:id="@+id/imageButton5"
+            android:id="@+id/dining"
             android:layout_row="1"
             android:layout_column="0"
             android:minHeight="@android:dimen/notification_large_icon_height"
@@ -80,42 +124,51 @@
             android:layout_marginLeft="9dp"
             android:layout_marginRight="20dp"
             android:layout_marginBottom="30dp"
-            android:background="@drawable/dining_icon_two" />
+            android:background="@drawable/dining_icon_two"
+            android:onClick="menuItemClicked"/>
+
 
         <ImageButton
             android:layout_width="65dp"
             android:layout_height="65dp"
-            android:id="@+id/imageButton9"
+            android:id="@+id/directory"
             android:layout_row="1"
             android:layout_column="1"
             android:minHeight="@android:dimen/notification_large_icon_height"
             android:minWidth="@android:dimen/notification_large_icon_width"
-            android:background="@drawable/directory_icon_2" />
+            android:background="@drawable/directory_icon_2"
+            android:onClick="menuItemClicked"/>
+
 
         <ImageButton
             android:layout_width="65dp"
             android:layout_height="65dp"
-            android:id="@+id/imageButton10"
+            android:id="@+id/emergency"
             android:layout_row="1"
             android:layout_column="2"
             android:minHeight="@android:dimen/notification_large_icon_height"
             android:minWidth="@android:dimen/notification_large_icon_width"
-            android:background="@drawable/emergency_icon" />
+            android:background="@drawable/emergency_icon"
+            android:onClick="menuItemClicked"/>
+
 
         <ImageButton
             android:layout_width="65dp"
             android:layout_height="65dp"
-            android:id="@+id/imageButton11"
+            android:id="@+id/events"
             android:layout_row="1"
             android:layout_column="3"
+            android:layout_marginLeft="5dp"
             android:minHeight="@android:dimen/notification_large_icon_height"
             android:minWidth="@android:dimen/notification_large_icon_width"
-            android:background="@drawable/calendar_icon_2" />
+            android:background="@drawable/calendar_icon_2"
+            android:onClick="menuItemClicked"/>
+
 
         <ImageButton
             android:layout_width="65dp"
             android:layout_height="65dp"
-            android:id="@+id/imageButton6"
+            android:id="@+id/finalExamSchedule"
             android:layout_row="2"
             android:layout_column="0"
             android:minHeight="@android:dimen/notification_large_icon_height"
@@ -123,42 +176,51 @@
             android:layout_marginLeft="9dp"
             android:layout_marginRight="20dp"
             android:layout_marginBottom="30dp"
-            android:background="@drawable/final_exam_icon" />
+            android:background="@drawable/final_exam_icon"
+            android:onClick="menuItemClicked"/>
+
 
         <ImageButton
             android:layout_width="65dp"
             android:layout_height="65dp"
-            android:id="@+id/imageButton12"
+            android:id="@+id/hoursOfOperation"
             android:layout_row="2"
             android:layout_column="1"
             android:minHeight="@android:dimen/notification_large_icon_height"
             android:minWidth="@android:dimen/notification_large_icon_width"
-            android:background="@drawable/hours_of_operation_icon" />
+            android:background="@drawable/hours_of_operation_icon"
+            android:onClick="menuItemClicked"/>
+
 
         <ImageButton
             android:layout_width="65dp"
             android:layout_height="65dp"
-            android:id="@+id/imageButton13"
+            android:id="@+id/library"
             android:layout_row="2"
             android:layout_column="2"
             android:minHeight="@android:dimen/notification_large_icon_height"
             android:minWidth="@android:dimen/notification_large_icon_width"
-            android:background="@drawable/library_icon" />
+            android:background="@drawable/library_icon"
+            android:onClick="menuItemClicked"/>
+
 
         <ImageButton
             android:layout_width="65dp"
             android:layout_height="65dp"
-            android:id="@+id/imageButton14"
+            android:id="@+id/maps"
             android:layout_row="2"
             android:layout_column="3"
+            android:layout_marginLeft="5dp"
             android:minHeight="@android:dimen/notification_large_icon_height"
             android:minWidth="@android:dimen/notification_large_icon_width"
-            android:background="@drawable/map_icon3" />
+            android:background="@drawable/map_icon3"
+            android:onClick="menuItemClicked"/>
+
 
         <ImageButton
             android:layout_width="65dp"
             android:layout_height="65dp"
-            android:id="@+id/imageButton7"
+            android:id="@+id/myTech"
             android:layout_row="3"
             android:layout_column="0"
             android:minHeight="@android:dimen/notification_large_icon_height"
@@ -166,67 +228,81 @@
             android:layout_marginLeft="9dp"
             android:layout_marginRight="20dp"
             android:layout_marginBottom="30dp"
-            android:background="@drawable/doublet_icon" />
+            android:background="@drawable/doublet_icon"
+            android:onClick="menuItemClicked"/>
+
 
         <ImageButton
             android:layout_width="65dp"
             android:layout_height="65dp"
-            android:id="@+id/imageButton15"
+            android:id="@+id/news"
             android:layout_row="3"
             android:layout_column="1"
             android:minHeight="@android:dimen/notification_large_icon_height"
             android:minWidth="@android:dimen/notification_large_icon_width"
-            android:background="@drawable/news_icon" />
+            android:background="@drawable/news_icon"
+            android:onClick="menuItemClicked"/>
+
 
         <ImageButton
             android:layout_width="65dp"
             android:layout_height="65dp"
-            android:id="@+id/imageButton16"
+            android:id="@+id/photos"
             android:layout_row="3"
             android:layout_column="2"
             android:minHeight="@android:dimen/notification_large_icon_height"
             android:minWidth="@android:dimen/notification_large_icon_width"
-            android:background="@drawable/photos_icon" />
+            android:background="@drawable/photos_icon"
+            android:onClick="menuItemClicked"/>
+
+
+        <!--<ImageButton-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:id="@+id/rro"-->
+            <!--android:layout_row="3"-->
+            <!--android:layout_column="3"-->
+            <!--android:minHeight="@android:dimen/notification_large_icon_height"-->
+            <!--android:minWidth="@android:dimen/notification_large_icon_width"-->
+            <!--android:onClick="menuItemClicked"/>-->
+
 
         <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/imageButton17"
+            android:layout_width="55dp"
+            android:layout_height="65dp"
+            android:id="@+id/studentOrganizationDirectory"
             android:layout_row="3"
             android:layout_column="3"
             android:minHeight="@android:dimen/notification_large_icon_height"
-            android:minWidth="@android:dimen/notification_large_icon_width" />
-
-        <ImageButton
-            android:layout_width="65dp"
-            android:layout_height="65dp"
-            android:id="@+id/imageButton8"
-            android:layout_row="4"
-            android:layout_column="0"
-            android:minHeight="@android:dimen/notification_large_icon_height"
             android:layout_marginLeft="9dp"
             android:minWidth="@android:dimen/notification_large_icon_width"
-            android:background="@drawable/studentorg_icon" />
+            android:background="@drawable/studentorg_icon"
+            android:onClick="menuItemClicked"/>
+
 
         <ImageButton
             android:layout_width="65dp"
             android:layout_height="65dp"
-            android:id="@+id/imageButton18"
+            android:id="@+id/techAnnounce"
+            android:layout_row="4"
+            android:layout_column="0"
+            android:layout_marginLeft="9dp"
+            android:minHeight="@android:dimen/notification_large_icon_height"
+            android:minWidth="@android:dimen/notification_large_icon_width"
+            android:background="@drawable/bullhorn_icon"
+            android:onClick="menuItemClicked"/>
+
+
+        <ImageButton
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:id="@+id/videos"
             android:layout_row="4"
             android:layout_column="1"
             android:minHeight="@android:dimen/notification_large_icon_height"
             android:minWidth="@android:dimen/notification_large_icon_width"
-            android:background="@drawable/bullhorn_icon" />
-
-        <ImageButton
-            android:layout_width="65dp"
-            android:layout_height="65dp"
-            android:id="@+id/imageButton19"
-            android:layout_row="4"
-            android:layout_column="2"
-            android:minHeight="@android:dimen/notification_large_icon_height"
-            android:minWidth="@android:dimen/notification_large_icon_width"
-            android:background="@drawable/videos_icon" />
+            android:background="@drawable/videos_icon"
+            android:onClick="menuItemClicked"/>
 
 
 
